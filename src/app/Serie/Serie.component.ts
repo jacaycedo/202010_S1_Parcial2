@@ -29,20 +29,7 @@ export class SerieComponent implements OnInit {
       this.promedio = (total/cantidad)
     })
   }
-  hacerPromedio()
-  {
-    var cantidad = 0;
-    var total = 0;
-    console.log(this.series.length);
-    for ( let s of this.series)
-    {
 
-      cantidad++;
-      total += s.seasons
-
-    }
-    this.promedio = (total / cantidad);
-  }
   onSelected(b:Serie)
   {
     this.selected = true;
