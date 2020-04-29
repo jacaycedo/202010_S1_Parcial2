@@ -1,0 +1,32 @@
+<div class ="container-fluid">
+<div class= "row">
+  <div clas ="col">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Channel</th>
+          <th scope="col">Seasons</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let s of series"  >
+        <tr>
+          <th scope="row">{{s.id}}</th>
+          <td (click)="onSelected(s)" >{{s.name}}</td>
+          <td>{{s.channel}}</td>
+          <td>{{s.seasons}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Seasons average: {{promedio}}</p>
+  </div>
+  <div class = "col">
+    <div *ngIf="selected">
+      <app-listarDetalle [detalle]= "serieDetalle"></app-listarDetalle>
+    </div>
+
+
+  </div>
+</div>
+</div>
